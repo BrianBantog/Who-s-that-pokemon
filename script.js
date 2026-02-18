@@ -28,8 +28,9 @@ function initGame() {
     // Show silhouette
     imgEl.src = secretPokemon.img; // For simplicity, we won't silhouette images
     imgEl.style.filter = "brightness(0)";
+    imgEl.style.transition = "0.3s ease";
     messageEl.textContent = "Guess the Pokémon!";
-    document.body.style.backgroundColor = "#f4f4f4";
+    document.body.style.backgroundColor = "#000000";
     inputEl.value = "";
     inputEl.focus();
     console.log("Secret Pokémon:", secretPokemon.name); // For testing
