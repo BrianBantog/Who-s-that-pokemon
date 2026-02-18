@@ -23,7 +23,7 @@ const messageEl = document.getElementById("message");
 function initGame() {
     const randomIndex = Math.floor(Math.random() * pokemons.length);
     secretPokemon = pokemons[randomIndex];
-    attemptsLeft = 5;
+    attemptsLeft = 6;
 
     // Show silhouette
     imgEl.src = secretPokemon.img; // For simplicity, we won't silhouette images
