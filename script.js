@@ -25,38 +25,37 @@ function initGame() {
     secretPokemon = pokemons[randomIndex];
     attemptsLeft = 5;
 
-    // Show silhouette
-    imgEl.src = secretPokemon.img; // For simplicity, we won't silhouette images
+    imgEl.src = secretPokemon.img;
+
+    // PURE BLACK silhouette
     imgEl.style.filter = "brightness(0)";
     imgEl.style.transition = "0.3s ease";
+
     messageEl.textContent = "Guess the Pokémon!";
     document.body.style.backgroundColor = "#000000";
     inputEl.value = "";
     inputEl.focus();
-    console.log("Secret Pokémon:", secretPokemon.name); // For testing
 }
 
 // ===== Check Guess =====
 function checkGuess() {
     let guess = inputEl.value.trim().toLowerCase();
 
-    if (guess === "") {
-        messageEl.textContent = `Incorrect guess. You have ${attemptsLeft} attempts left. Try again!`;
-        return;
-    }
+    if (!guess) return;
 
     if (guess === secretPokemon.name) {
-        messageEl.textContent = "🎉 Congratulations! You guessed the Pokémon!";
-        imgEl.style.filter = "none"; // Reveal full color
-        document.body.style.backgroundColor = "#d4edda"; // Green background
+        messageEl.textContent = "🎉 Correct!";
+        imgEl.style.filter = "none"; // reveal
+        document.body.style.backgroundColor = "#1e7e34";
     } else {
         attemptsLeft--;
+
         if (attemptsLeft > 0) {
-            messageEl.textContent = `❌ Incorrect guess. You have ${attemptsLeft} attempts left. Try again!`;
+            messageEl.textContent = `❌ Incorrect! ${attemptsLeft} attempts left.`;
         } else {
-            messageEl.textContent = `💀 Game over! The Pokémon was '${secretPokemon.name}'.`;
-            imgEl.style.filter = "none"; // Reveal full color
-            document.body.style.backgroundColor = "#f8d7da"; // Red background
+            messageEl.textContent = `💀 Game Over! It was ${secretPokemon.name}.`;
+            imgEl.style.filter = "none";
+            document.body.style.backgroundColor = "#8b0000";
         }
     }
 
@@ -66,9 +65,11 @@ function checkGuess() {
 
 // ===== Event Listeners =====
 submitBtn.addEventListener("click", checkGuess);
-inputEl.addEventListener("keypress", function(e) {
+
+inputEl.addEventListener("keydown", function (e) {
     if (e.key === "Enter") checkGuess();
 });
+
 restartBtn.addEventListener("click", initGame);
 
 // ===== Start Game =====
