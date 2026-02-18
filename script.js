@@ -4,7 +4,7 @@ const pokemons = [
     { name: "bulbasaur", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" },
     { name: "charmander", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" },
     { name: "squirtle", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" },
-    { name: "eevee", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" }
+    { name: "eevee", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" },
     { name: "vaporeon", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/134.png" }
 ];
 
@@ -23,7 +23,7 @@ const messageEl = document.getElementById("message");
 function initGame() {
     const randomIndex = Math.floor(Math.random() * pokemons.length);
     secretPokemon = pokemons[randomIndex];
-    attemptsLeft = 6;
+    attemptsLeft = 5;
 
     // Show silhouette
     imgEl.src = secretPokemon.img; // For simplicity, we won't silhouette images
