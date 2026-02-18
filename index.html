@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who's That Pokémon?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        padding: 30px;
+        transition: background-color 0.5s;
+    }
+    #pokemon-img {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+    }
+    input {
+        padding: 10px;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    #message {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Who's That Pokémon?</h1>
+<img id="pokemon-img" src="" alt="Pokémon silhouette">
+<br>
+<input type="text" id="guess-input" placeholder="Enter Pokémon name">
+<button id="submit-btn">Guess</button>
+<button id="restart-btn">Restart</button>
+
+<p id="message"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
