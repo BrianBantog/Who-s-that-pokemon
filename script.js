@@ -1,10 +1,10 @@
 // ===== Pokémon List =====
 const pokemons = [
-    { name: "pikachu", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" },
-    { name: "bulbasaur", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" },
-    { name: "charmander", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" },
-    { name: "squirtle", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" },
-    { name: "eevee", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" }
+    { name: "Pikachu", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" },
+    { name: "Bulbasaur", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" },
+    { name: "Charmander", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" },
+    { name: "Squirtle", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" },
+    { name: "Eevee", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" }
 ];
 
 // ===== Game Variables =====
