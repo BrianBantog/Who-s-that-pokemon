@@ -4,7 +4,9 @@ const pokemons = [
     { name: "Bulbasaur", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" },
     { name: "Charmander", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" },
     { name: "Squirtle", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" },
-    { name: "Eevee", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" }
+    { name: "Eevee", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" },
+    { name: "Jigglypuff", img:
+"https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png" },
 ];
 
 // ===== Game Variables =====
