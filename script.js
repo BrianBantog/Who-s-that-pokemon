@@ -54,7 +54,7 @@ function checkGuess() {
         if (attemptsLeft > 0) {
             messageEl.textContent = `Guess again. You have ${attemptsLeft} attempts left. Try again!`;
         } else {
-            messageEl.textContent = `Its... '${secretPokemon.name}'.`;
+            messageEl.textContent = Its... '${secretPokemon.name}';
             imgEl.style.filter = "none"; // Reveal full color
             document.body.style.backgroundColor = "#f8d7da"; // Red background
         }
