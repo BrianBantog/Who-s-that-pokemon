@@ -5,7 +5,7 @@ const pokemons = [
     { name: "Charmander", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" },
     { name: "Squirtle", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" },
     { name: "Eevee", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" },
-
+    { name: "Jigglypuff", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png" },
 ];
 
 
@@ -29,7 +29,7 @@ function initGame() {
     // Show silhouette
     imgEl.src = secretPokemon.img; // For simplicity, we won't silhouette images
     imgEl.style.filter = "brightness(0) invert(1)";
-    messageEl.textContent = "Guess the Pokémon!";
+    messageEl.textContent = "Who's that Pokémon?";
     document.body.style.backgroundColor = "#f4f4f4";
     inputEl.value = "";
     inputEl.focus();
@@ -41,7 +41,7 @@ function checkGuess() {
     let guess = inputEl.value.trim().toLowerCase();
 
     if (guess === "") {
-        messageEl.textContent = `Incorrect guess. You have ${attemptsLeft} attempts left. Try again!`;
+        messageEl.textContent = `Nope. Guess again. You have ${attemptsLeft} attempts left. `;
         return;
     }
 
