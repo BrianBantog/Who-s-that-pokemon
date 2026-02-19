@@ -52,7 +52,7 @@ function checkGuess() {
         if (attemptsLeft > 0) {
             messageEl.textContent = `❌ Incorrect guess. You have ${attemptsLeft} attempts left. Try again!`;
         } else {
-            messageEl.textContent = `💀 Game over! The Pokémon was '${secretPokemon.name}'.`;
+            messageEl.textContent = `😢 Game over! The Pokémon was '${secretPokemon.name}'.`;
             imgEl.style.filter = "none"; // Reveal full color
             document.body.style.backgroundColor = "#f8d7da"; // Red background
         }
