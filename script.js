@@ -1,19 +1,12 @@
 // ===== Pokémon List =====
 const pokemons = [
-  
   { name: "Pikachu", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" },
-
     { name: "Bulbasaur", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" },
-
     { name: "Charmander", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" },
-
     { name: "Squirtle", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" },
-
     { name: "Eevee", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" },
-
     { name: "Jigglypuff", img:
 "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png" },
-
 ];
 
 
@@ -62,7 +55,7 @@ function checkGuess() {
         if (attemptsLeft > 0) {
             messageEl.textContent = `❌ Incorrect guess. You have ${attemptsLeft} attempts left. Try again!`;
         } else {
-            messageEl.textContent = `😢 Game over! The Pokémon was '${secretPokemon.name}'.`;
+            messageEl.textContent = `Its... '${secretPokemon.name}'.`;
             imgEl.style.filter = "none"; // Reveal full color
             document.body.style.backgroundColor = "#f8d7da"; // Red background
         }
