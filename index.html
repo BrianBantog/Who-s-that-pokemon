@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Who's That Pokémon?</title>
+
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -12,45 +13,86 @@
         padding: 30px;
         transition: background-color 0.5s;
     }
-    #pokemon-img {
-        width: 200px;
-        height: 200px;
-        margin: 20px;
+
+    h1 {
+        margin-bottom: 5px;
     }
-    input {
-        padding: 10px;
-        font-size: 16px;
-    }
-    button {
-        padding: 10px 15px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-    #message {
-        margin-top: 20px;
-        font-weight: bold;
-        font-size: 18px;
-    }
+
     #author {
         font-size: 14px;
         color: #555;
         margin-bottom: 20px;
     }
+
+    #pokemon-img {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        object-fit: contain;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        margin: 5px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #restart-btn {
+        background-color: #6c757d;
+    }
+
+    #restart-btn:hover {
+        background-color: #545b62;
+    }
+
+    #message {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        min-height: 24px;
+    }
 </style>
 </head>
+
 <body>
 
 <h1>Who's That Pokémon?</h1>
 <p id="author">By: Brian V. Bantog | BSIT - 2D</p>
 
 <img id="pokemon-img" src="" alt="Pokémon silhouette">
+
 <br>
-<input type="text" id="guess-input" placeholder="Enter Pokémon Name">
+
+<input 
+    type="text" 
+    id="guess-input" 
+    placeholder="Enter Pokémon Name"
+    autocomplete="off"
+>
 <button id="submit-btn">Guess</button>
 <button id="restart-btn">Restart</button>
 
 <p id="message"></p>
 
 <script src="script.js"></script>
+
 </body>
 </html>
