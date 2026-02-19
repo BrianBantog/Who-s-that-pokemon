@@ -5,8 +5,6 @@ const pokemons = [
     { name: "Charmander", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" },
     { name: "Squirtle", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" },
     { name: "Eevee", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" },
-    { name: "Jigglypuff", img:
-"https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png" },
 ];
 
 
@@ -47,13 +45,13 @@ function checkGuess() {
     }
 
     if (guess === secretPokemon.name) {
-        messageEl.textContent = "🎉 Congratulations! You guessed the Pokémon!";
+        messageEl.textContent = " It's... ";
         imgEl.style.filter = "none"; // Reveal full color
         document.body.style.backgroundColor = "#d4edda"; // Green background
     } else {
         attemptsLeft--;
         if (attemptsLeft > 0) {
-            messageEl.textContent = `❌ Incorrect guess. You have ${attemptsLeft} attempts left. Try again!`;
+            messageEl.textContent = `Guess again. You have ${attemptsLeft} attempts left. Try again!`;
         } else {
             messageEl.textContent = `Its... '${secretPokemon.name}'.`;
             imgEl.style.filter = "none"; // Reveal full color
